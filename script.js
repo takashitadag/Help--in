@@ -1,4 +1,3 @@
-// script.js
 let currentSize = 16;
 
 function increaseFont() {
@@ -18,3 +17,18 @@ function decreaseFont() {
 function toggleContrast() {
   document.body.classList.toggle("contrast");
 }
+
+function toggleSeniorMode() {
+  document.body.classList.toggle("senior");
+}
+
+function toggleMenu() {
+  const menu = document.getElementById("menu");
+  menu.classList.toggle("active");
+}
+
+document.querySelectorAll(".menu a").forEach(link => {
+  link.addEventListener("click", () => {
+    document.getElementById("menu").classList.remove("active");
+  });
+});
