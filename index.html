@@ -1,154 +1,370 @@
-<!-- index.html -->
 <!DOCTYPE html>
 <html lang="cs">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Help-IN | Ukázka nového webu</title>
-  <meta name="description" content="Moderní, bezpečný a přístupný web pro Help-IN.">
-  <link rel="stylesheet" href="style.css">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <title>Help-IN | Sociální služby v okrese Bruntál</title>
+  <meta name="description" content="Help-IN poskytuje pečovatelskou službu, sociální poradenství, dluhové poradenství a podporu při zajištění kompenzačních pomůcek v okrese Bruntál." />
+
+  <link rel="stylesheet" href="style.css" />
 </head>
+
 <body>
+  <div class="accessibility-bar">
+    <p>Help-IN • sociální služby v okrese Bruntál</p>
 
-<div class="topbar">
-  <span>Help-IN • Sociální služby v okrese Bruntál</span>
-  <div>
-    <button onclick="decreaseFont()">A−</button>
-    <button onclick="increaseFont()">A+</button>
-    <button onclick="toggleContrast()">Vysoký kontrast</button>
-  </div>
-</div>
-
-<header>
-  <nav>
-    <div class="logo">Help-IN</div>
-    <div class="menu">
-      <a href="#sluzby">Služby</a>
-      <a href="#pristupnost">Přístupnost</a>
-      <a href="#bezpecnost">Bezpečnost</a>
-      <a href="#kontakt">Kontakt</a>
-    </div>
-  </nav>
-</header>
-
-<section class="hero">
-  <div class="hero-text">
-    <p class="tag">Sociální služby • Bruntálsko</p>
-    <h1>Pomáháme lidem zůstat doma, bezpečně a důstojně.</h1>
-    <p>
-      Moderní web pro Help-IN má být přehledný, bezpečný a snadno použitelný
-      pro seniory, rodiny klientů, zaměstnance i partnery organizace.
-    </p>
-    <div class="buttons">
-      <a href="#kontakt" class="btn primary">Potřebuji pomoc</a>
-      <a href="#sluzby" class="btn secondary">Zobrazit služby</a>
+    <div class="accessibility-actions">
+      <button onclick="decreaseFont()">A−</button>
+      <button onclick="increaseFont()">A+</button>
+      <button onclick="toggleSeniorMode()">Senior režim</button>
+      <button onclick="toggleContrast()">Vysoký kontrast</button>
     </div>
   </div>
 
-  <div class="hero-card">
-    <h3>Nový web by měl být:</h3>
-    <ul>
-      <li>přístupný pro seniory</li>
-      <li>bezpečný a v souladu s GDPR</li>
-      <li>přehledný na mobilu</li>
-      <li>snadno spravovatelný</li>
-    </ul>
-  </div>
-</section>
+  <header class="header">
+    <nav class="nav">
+      <a href="#uvod" class="logo"><span>Help</span>-IN</a>
 
-<section class="stats">
-  <div><strong>216+</strong><span>klientů</span></div>
-  <div><strong>17+</strong><span>zaměstnanců</span></div>
-  <div><strong>4</strong><span>hlavní služby</span></div>
-</section>
+      <button class="mobile-toggle" onclick="toggleMenu()">☰</button>
 
-<section id="sluzby" class="section">
-  <p class="tag">Barevná kontinuita služeb</p>
-  <h2>Služby zůstanou jasně rozlišené</h2>
-  <p class="section-text">
-    Každá služba může mít vlastní barvu, která bude pokračovat i na její samostatné stránce.
-  </p>
+      <div class="menu" id="menu">
+        <a href="#uvod">Domů</a>
+        <a href="#sluzby">Služby</a>
+        <a href="#postup">Jak pomáháme</a>
+        <a href="#kariera">Kariéra</a>
+        <a href="#dokumenty">Dokumenty</a>
+        <a href="#kontakt" class="menu-cta">Potřebuji pomoc</a>
+      </div>
+    </nav>
+  </header>
 
-  <div class="services">
-    <div class="service blue">
-      <h3>Pečovatelská služba</h3>
-      <p>Podpora seniorů a osob, které potřebují pomoc v domácím prostředí.</p>
-    </div>
+  <main>
+    <section id="uvod" class="hero">
+      <div class="hero-content">
+        <p class="eyebrow">Sociální služby Bruntálsko</p>
 
-    <div class="service green">
-      <h3>Sociální poradenství</h3>
-      <p>Pomoc při řešení náročných životních situací a orientaci v možnostech podpory.</p>
-    </div>
+        <h1>Pomáháme lidem žít doma bezpečně, důstojně a s podporou.</h1>
 
-    <div class="service yellow">
-      <h3>Dluhové poradenství</h3>
-      <p>Bezpečné vedení klienta při řešení dluhů, exekucí a finanční tísně.</p>
-    </div>
+        <p class="hero-text">
+          Poskytujeme pečovatelskou službu, sociální poradenství, dluhové poradenství
+          a podporu při zajištění kompenzačních pomůcek pro obyvatele okresu Bruntál.
+        </p>
 
-    <div class="service red">
-      <h3>Kompenzační pomůcky</h3>
-      <p>Informace a podpora při zajištění potřebných pomůcek.</p>
-    </div>
-  </div>
-</section>
+        <div class="hero-buttons">
+          <a href="#kontakt" class="btn primary">Potřebuji pomoc</a>
+          <a href="#sluzby" class="btn secondary">Naše služby</a>
+        </div>
+      </div>
 
-<section id="pristupnost" class="section light">
-  <p class="tag">Přístupnost</p>
-  <h2>Web navržený i pro seniory</h2>
+      <aside class="hero-card">
+        <h2>Jak vám můžeme pomoci?</h2>
+        <ul>
+          <li>Pomoc seniorům v domácím prostředí</li>
+          <li>Poradenství v těžkých životních situacích</li>
+          <li>Podpora při řešení dluhů a exekucí</li>
+          <li>Informace ke kompenzačním pomůckám</li>
+          <li>Jednoduché spojení se správnou službou</li>
+        </ul>
+      </aside>
+    </section>
 
-  <div class="grid">
-    <div>
-      <h3>Zvětšení písma</h3>
-      <p>Návštěvník si může jednoduše zvětšit nebo zmenšit velikost textu.</p>
-    </div>
+    <section class="stats">
+      <div>
+        <strong>216+</strong>
+        <span>klientů</span>
+      </div>
+      <div>
+        <strong>17+</strong>
+        <span>zaměstnanců</span>
+      </div>
+      <div>
+        <strong>4</strong>
+        <span>hlavní služby</span>
+      </div>
+      <div>
+        <strong>100%</strong>
+        <span>zaměření na člověka</span>
+      </div>
+    </section>
 
-    <div>
-      <h3>Vysoký kontrast</h3>
-      <p>Režim pro lepší čitelnost u lidí se zhoršeným zrakem.</p>
-    </div>
+    <section id="sluzby" class="section">
+      <p class="eyebrow">Naše služby</p>
+      <h2>Vyberte službu podle své situace</h2>
 
-    <div>
-      <h3>Jednoduchá navigace</h3>
-      <p>Jasné menu, velká tlačítka a rychlá cesta ke kontaktu.</p>
-    </div>
-  </div>
-</section>
+      <p class="section-lead">
+        Každá služba má vlastní barvu, aby se návštěvníci na webu jednoduše zorientovali.
+      </p>
 
-<section id="bezpecnost" class="section">
-  <p class="tag">Bezpečnost a regulace</p>
-  <h2>GDPR, cookies a bezpečný provoz</h2>
+      <div class="services">
+        <article class="service service-blue">
+          <div class="service-icon">🏠</div>
+          <h3>Pečovatelská služba</h3>
+          <p>Pomoc seniorům a osobám, které potřebují podporu při každodenním životě doma.</p>
+          <a href="#pecovatelska" class="service-link">Zjistit více</a>
+        </article>
 
-  <div class="grid">
-    <div>
-      <h3>GDPR</h3>
-      <p>Formuláře budou obsahovat správné informace o zpracování osobních údajů.</p>
-    </div>
+        <article class="service service-green">
+          <div class="service-icon">🤝</div>
+          <h3>Sociální poradenství</h3>
+          <p>Pomoc při řešení náročných životních situací a orientaci v možnostech podpory.</p>
+          <a href="#socialni" class="service-link">Zjistit více</a>
+        </article>
 
-    <div>
-      <h3>Cookies</h3>
-      <p>Souhlas s cookies bude řešen moderně: přijmout, odmítnout, nastavení.</p>
-    </div>
+        <article class="service service-yellow">
+          <div class="service-icon">📄</div>
+          <h3>Dluhové poradenství</h3>
+          <p>Podpora při řešení dluhů, exekucí, splátek a finanční tísně.</p>
+          <a href="#dluhove" class="service-link">Zjistit více</a>
+        </article>
 
-    <div>
-      <h3>Technická bezpečnost</h3>
-      <p>HTTPS, zálohy, aktualizace a ochrana formulářů proti spamu.</p>
-    </div>
-  </div>
-</section>
+        <article class="service service-red">
+          <div class="service-icon">♿</div>
+          <h3>Kompenzační pomůcky</h3>
+          <p>Informace a pomoc při zajištění potřebných kompenzačních pomůcek.</p>
+          <a href="#pomucky" class="service-link">Zjistit více</a>
+        </article>
+      </div>
+    </section>
 
-<section id="kontakt" class="cta">
-  <h2>Hlavní cíl: jednodušší cesta k pomoci</h2>
-  <p>
-    Nový web by měl pomoci lidem rychle najít správnou službu, pochopit postup
-    a jednoduše kontaktovat organizaci.
-  </p>
-  <a href="#" class="btn primary">Kontaktovat Help-IN</a>
-</section>
+    <section id="pecovatelska" class="service-section blue-bg">
+      <div>
+        <p class="eyebrow">Pečovatelská služba</p>
+        <h2>Pomoc v domácím prostředí</h2>
+        <p>
+          Pomáháme lidem zvládat běžné denní činnosti tak, aby mohli co nejdéle
+          zůstat ve svém přirozeném prostředí.
+        </p>
+      </div>
 
-<footer>
-  <p>Ukázkový návrh pro Help-IN připravený Marvonixem.</p>
-</footer>
+      <div class="service-detail-card">
+        <h3>Služba může zahrnovat</h3>
+        <ul>
+          <li>pomoc s hygienou a péčí o osobu,</li>
+          <li>pomoc s chodem domácnosti,</li>
+          <li>doprovod k lékaři nebo na úřady,</li>
+          <li>podporu rodiny a blízkých osob.</li>
+        </ul>
+      </div>
+    </section>
 
-<script src="script.js"></script>
+    <section id="socialni" class="service-section green-bg">
+      <div>
+        <p class="eyebrow">Sociální poradenství</p>
+        <h2>Podpora v náročných životních situacích</h2>
+        <p>
+          Pomáháme lidem zorientovat se v možnostech pomoci, sociálních dávkách,
+          službách a dalších formách podpory.
+        </p>
+      </div>
+
+      <div class="service-detail-card">
+        <h3>S čím pomáháme</h3>
+        <ul>
+          <li>orientace v sociálním systému,</li>
+          <li>řešení osobní nebo rodinné situace,</li>
+          <li>pomoc s úředními kroky,</li>
+          <li>nasměrování na vhodné služby.</li>
+        </ul>
+      </div>
+    </section>
+
+    <section id="dluhove" class="service-section yellow-bg">
+      <div>
+        <p class="eyebrow">Dluhové poradenství</p>
+        <h2>Pomoc při řešení dluhů a exekucí</h2>
+        <p>
+          Poskytujeme podporu lidem, kteří se dostali do finanční tísně
+          a potřebují bezpečně řešit svou situaci.
+        </p>
+      </div>
+
+      <div class="service-detail-card">
+        <h3>Oblasti pomoci</h3>
+        <ul>
+          <li>dluhy a splátky,</li>
+          <li>exekuce,</li>
+          <li>komunikace s věřiteli,</li>
+          <li>hledání dalšího postupu.</li>
+        </ul>
+      </div>
+    </section>
+
+    <section id="pomucky" class="service-section red-bg">
+      <div>
+        <p class="eyebrow">Kompenzační pomůcky</p>
+        <h2>Podpora při zajištění potřebných pomůcek</h2>
+        <p>
+          Pomáháme s informacemi o pomůckách, které mohou zlepšit soběstačnost,
+          bezpečí a kvalitu každodenního života.
+        </p>
+      </div>
+
+      <div class="service-detail-card">
+        <h3>Pomoc se týká</h3>
+        <ul>
+          <li>orientace v dostupných pomůckách,</li>
+          <li>základního poradenství,</li>
+          <li>nasměrování na další možnosti,</li>
+          <li>podpory při výběru řešení.</li>
+        </ul>
+      </div>
+    </section>
+
+    <section id="postup" class="section soft">
+      <p class="eyebrow">Jak probíhá pomoc</p>
+      <h2>Jednoduchá cesta ke správné službě</h2>
+
+      <div class="steps">
+        <div class="step">
+          <span>1</span>
+          <h3>Ozvěte se nám</h3>
+          <p>Telefonicky, e-mailem nebo přes kontaktní formulář.</p>
+        </div>
+
+        <div class="step">
+          <span>2</span>
+          <h3>Probereme situaci</h3>
+          <p>Společně zjistíme, jakou podporu potřebujete.</p>
+        </div>
+
+        <div class="step">
+          <span>3</span>
+          <h3>Najdeme řešení</h3>
+          <p>Doporučíme vhodnou službu a další konkrétní kroky.</p>
+        </div>
+      </div>
+    </section>
+
+    <section id="pristupnost" class="section">
+      <p class="eyebrow">Přístupnost</p>
+      <h2>Web přehledný i pro seniory</h2>
+
+      <div class="feature-grid">
+        <div class="feature-card">
+          <h3>Zvětšení písma</h3>
+          <p>Návštěvník si může text jednoduše zvětšit nebo zmenšit.</p>
+        </div>
+
+        <div class="feature-card">
+          <h3>Senior režim</h3>
+          <p>Větší písmo, větší tlačítka a jednodušší čtení obsahu.</p>
+        </div>
+
+        <div class="feature-card">
+          <h3>Vysoký kontrast</h3>
+          <p>Kontrastní režim pro lepší čitelnost u lidí se zhoršeným zrakem.</p>
+        </div>
+
+        <div class="feature-card">
+          <h3>Mobilní verze</h3>
+          <p>Web je přizpůsobený telefonům, tabletům i počítačům.</p>
+        </div>
+      </div>
+    </section>
+
+    <section id="kariera" class="section soft">
+      <p class="eyebrow">Kariéra</p>
+      <h2>Staňte se součástí týmu Help-IN</h2>
+
+      <p class="section-lead">
+        Práce v sociálních službách má smysl. Pomáhá lidem zvládat každodenní život
+        a zůstat v prostředí, které znají.
+      </p>
+
+      <div class="career-card">
+        <div>
+          <h3>Pečovatel / pečovatelka</h3>
+          <p>Hledáme empatické lidi, kteří chtějí pomáhat seniorům a osobám v domácím prostředí.</p>
+        </div>
+        <a href="#kontakt" class="btn primary">Mám zájem</a>
+      </div>
+    </section>
+
+    <section id="dokumenty" class="section">
+      <p class="eyebrow">Dokumenty</p>
+      <h2>Důležité informace na jednom místě</h2>
+
+      <div class="documents">
+        <a href="#">Výroční zprávy</a>
+        <a href="#">Ochrana osobních údajů</a>
+        <a href="#">Formuláře ke stažení</a>
+        <a href="#">Dokumenty organizace</a>
+      </div>
+    </section>
+
+    <section id="bezpecnost" class="section security">
+      <p class="eyebrow">Bezpečnost a ochrana údajů</p>
+      <h2>Bezpečný provoz webu a ochrana osobních údajů</h2>
+
+      <div class="feature-grid">
+        <div class="feature-card">
+          <h3>HTTPS</h3>
+          <p>Zabezpečené spojení mezi návštěvníkem a webem.</p>
+        </div>
+
+        <div class="feature-card">
+          <h3>GDPR</h3>
+          <p>Jasné informace o zpracování osobních údajů u formulářů.</p>
+        </div>
+
+        <div class="feature-card">
+          <h3>Cookies</h3>
+          <p>Souhlas s cookies včetně možnosti odmítnutí a nastavení.</p>
+        </div>
+
+        <div class="feature-card">
+          <h3>Zálohy a aktualizace</h3>
+          <p>Pravidelná technická správa a ochrana webu.</p>
+        </div>
+      </div>
+    </section>
+
+    <section id="kontakt" class="contact-section">
+      <div>
+        <p class="eyebrow">Kontakt</p>
+        <h2>Potřebujete pomoc nebo se chcete poradit?</h2>
+        <p>
+          Kontaktujte nás. Pomůžeme vám najít správnou službu nebo další postup.
+        </p>
+
+        <div class="contact-info">
+          <p><strong>Telefon:</strong> +420 000 000 000</p>
+          <p><strong>E-mail:</strong> info@help-in.cz</p>
+          <p><strong>Působnost:</strong> okres Bruntál</p>
+        </div>
+      </div>
+
+      <form class="contact-form">
+        <label>
+          Jméno a příjmení
+          <input type="text" placeholder="Vaše jméno" />
+        </label>
+
+        <label>
+          Telefon nebo e-mail
+          <input type="text" placeholder="Kontakt na vás" />
+        </label>
+
+        <label>
+          S čím potřebujete pomoci?
+          <textarea placeholder="Krátce popište svou situaci"></textarea>
+        </label>
+
+        <label class="checkbox">
+          <input type="checkbox" />
+          Souhlasím se zpracováním osobních údajů za účelem vyřízení dotazu.
+        </label>
+
+        <button type="submit" class="btn primary">Odeslat dotaz</button>
+      </form>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <p>Help-IN • sociální služby v okrese Bruntál</p>
+  </footer>
+
+  <script src="script.js"></script>
 </body>
 </html>
