@@ -1,0 +1,48 @@
+<!DOCTYPE html><html lang="cs"><head><meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<meta name="theme-color" content="#2f80ed" />
+<meta name="robots" content="index, follow" />
+<meta http-equiv="Content-Security-Policy" content="default-src 'self'; img-src 'self' data: https:; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; font-src https://fonts.gstatic.com; script-src 'self' 'unsafe-inline'; connect-src 'self'; base-uri 'self'; form-action 'self'; upgrade-insecure-requests">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;750;850;900;1000&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css" />
+<link rel="manifest" href="site.webmanifest" /><title>Kontakt | Help-IN</title><meta name="description" content="Nejrychleji nás zastihnete telefonicky. Rádi vám pomůžeme najít správné řešení."></head><body><a class="skip-link" href="#main">Přeskočit na obsah</a>
+<div class="accessibility-bar" aria-label="Nástroje přístupnosti">
+  <div class="access-inner">
+    <div class="access-label">👁️ Přístupnost pro seniory</div>
+    <div class="access-actions">
+      <button class="access-btn" onclick="decreaseFont()">A− menší</button>
+      <button class="access-btn" onclick="increaseFont()">A+ větší</button>
+      <button class="access-btn" onclick="toggleSeniorMode()">Senior režim</button>
+      <button class="access-btn" onclick="toggleContrast()">Vysoký kontrast</button>
+      <a class="access-btn primary" href="tel:+420733535580">📞 733 535 580</a>
+    </div>
+  </div>
+</div>
+<header class="site-header">
+  <nav class="nav" aria-label="Hlavní navigace">
+    <a class="brand" href="index.html"><span class="logo-mark" aria-hidden="true">H</span><span>Help-IN, o.p.s.</span></a>
+    <button class="mobile-toggle" onclick="toggleMenu()" aria-label="Otevřít menu">Menu</button>
+    <div class="menu">
+      <a href="index.html" class="">Domů</a><a href="index.html#sluzby" class="">Služby</a><a href="o-nas.html" class="">O nás</a><a href="dokumenty.html" class="">Dokumenty</a><a href="kariera.html" class="">Kariéra</a><a href="kontakt.html" class="cta">Kontakt</a>
+    </div>
+  </nav>
+</header><main id="main"><section class="hero"><div class="container"><span class="badge">Help-IN</span><h1>Ozvěte se nám</h1><p class="lead">Nejrychleji nás zastihnete telefonicky. Rádi vám pomůžeme najít správné řešení.</p><div class="hero-actions"><a class="btn primary" href="tel:+420733535580">📞 Zavolat</a><a class="btn secondary" href="index.html">Zpět domů</a></div></div></section><section class="section"><div class="container contact-panel"><div class="contact-card"><div class="contact-row">✉️ <div><b>E-mail</b><br><a href="mailto:helpinops@atlas.cz">helpinops@atlas.cz</a></div></div><div class="contact-row">📍 <div><b>Adresa</b><br>U Rybníka 4, 792 01 Bruntál</div></div><div class="contact-row">📞 <div><b>Telefon</b><br><a href="tel:+420733535580">+420 733 535 580</a></div></div></div><div class="map-card"><div><h3>Jsme tu pro vás</h3><p>Zavolejte nám a společně zjistíme, jak vám můžeme pomoci.</p></div></div></div></section><section class="section compact"><div class="container cards-3"><article class="info-card"><h3>Lidskost</h3><p>Komunikujeme jednoduše, klidně a s respektem.</p></article><article class="info-card"><h3>Přístupnost</h3><p>Web i informace jsou navržené tak, aby jim rozuměli senioři.</p></article><article class="info-card"><h3>Bezpečí</h3><p>Dbáme na soukromí, důvěru a jasný postup.</p></article></div></section></main><footer class="site-footer footer">
+  <div class="container footer-grid">
+    <div>
+      <div class="footer-logo"><span class="logo-mark footer-mark" aria-hidden="true">H</span><strong>Help-IN, o.p.s.</strong></div>
+      <p>Podporujeme život občana. Pomáháme lidem v okrese Bruntál žít bezpečněji, důstojněji a s podporou.</p>
+    </div>
+    <div><h3>Rychlé odkazy</h3><p><a href="index.html#sluzby">Služby</a><br><a href="gdpr.html">GDPR</a><br><a href="cookies.html">Cookies</a><br><a href="kontakt.html">Kontakt</a></p></div>
+    <div><h3>Kontakt</h3><p><a href="tel:+420733535580">+420 733 535 580</a><br><a href="mailto:helpinops@atlas.cz">helpinops@atlas.cz</a><br>U Rybníka 4, Bruntál</p></div>
+  </div>
+  <div class="container copyright">© Help-IN, o.p.s. • Web s důrazem na přístupnost, SEO a důvěru.</div>
+</footer>
+<a class="sticky-call" href="tel:+420733535580">📞 Zavolat Help-IN</a>
+<div class="cookie-banner" id="cookieBanner" role="dialog" aria-label="Nastavení cookies">
+  <strong>Souhlas s cookies a ochranou soukromí</strong>
+  <p>Používáme pouze nezbytné technické cookies pro správné fungování webu. Analytické cookies můžeme zapnout až po vašem souhlasu.</p>
+  <div class="cookie-actions"><button class="btn primary" onclick="acceptCookies()">Souhlasím</button><button class="btn secondary" onclick="declineCookies()">Pouze nezbytné</button><a class="btn secondary" href="cookies.html">Více informací</a></div>
+</div>
+<script src="script.js"></script></body></html>
